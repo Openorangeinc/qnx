@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;readme.txt&apos; to &apos;172.16.26.2&apos;" description="Move &apos;readme.txt&apos; to &apos;172.16.26.2&apos;" destination="/172.16.26.2" element1="/des_controller/readme.txt" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1658169400071" updateReferences="true"/>
+</session>

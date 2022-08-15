@@ -1,0 +1,12 @@
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,172.16.26.2/RELEASE=7.0.0
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,172.16.26.2/arch=x86_64
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,172.16.26.2/os=qnx
+LaunchTargetManager/configs/bin.thread_factory=com.qnx.tools.ide.target.qconn\:172.16.26.2
+LaunchTargetManager/configs/bin.thread_waker=com.qnx.tools.ide.target.qconn\:172.16.26.2
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
+com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/thread_factory/activeLaunchMode=run
+com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/thread_factory/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:172.16.26.2
+com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/thread_waker/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:172.16.26.2
+configDescList=com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/thread_factory,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/thread_waker,com.qnx.tools.ide.qde.debug.core.descriptorType.default\:bin.thread_factory,com.qnx.tools.ide.qde.debug.core.descriptorType.default\:bin.thread_waker
+eclipse.preferences.version=1

@@ -1,0 +1,7 @@
+20:35:25 **** Build of configuration x86_64-debug for project Assignment1 ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Assignment1.d,-MT,build/x86_64-debug/src/Assignment1.o -o build/x86_64-debug/src/Assignment1.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Assignment1.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Assignment1   build/x86_64-debug/src/Assignment1.o  
+
+20:35:25 Build Finished (took 284ms)
+

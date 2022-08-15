@@ -1,0 +1,360 @@
+13:57:10 **** Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+13:57:39 **** Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_waker.d,-MT,build/x86_64-debug/src/thread_waker.o -o build/x86_64-debug/src/thread_waker.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_waker.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_waker   build/x86_64-debug/src/thread_waker.o  
+19:22:18 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'thread_factory':
+src/thread_factory.c:48:12: warning: implicit declaration of function 'pthread_self' [-Wimplicit-function-declaration]
+  int c_id =pthread_self();
+            ^
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:72:24: error: 'sigusr1_handler' undeclared (first use in this function)
+   Sigusr1.sa_handler = sigusr1_handler;
+                        ^
+src/thread_factory.c:72:24: note: each undeclared identifier is reported only once for each function it appears in
+src/thread_factory.c:97:4: warning: implicit declaration of function 'pthread_attr_init' [-Wimplicit-function-declaration]
+    pthread_attr_init(&pthread_att);
+    ^
+src/thread_factory.c:98:4: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+Makefile:55: recipe for target 'build/x86_64-debug/src/thread_factory.o' failed
+    pthread_create(NULL,&pthread_att,&thread_factory,NULL);
+    ^
+src/thread_factory.c:99:4: warning: implicit declaration of function 'pthread_destroy' [-Wimplicit-function-declaration]
+    pthread_destroy(&pthread_att);
+    ^
+src/thread_factory.c:108:26: warning: comparison between pointer and integer
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                          ^
+src/thread_factory.c:108:19: warning: passing argument 1 of 'sem_destroy' makes pointer from integer without a cast [-Wint-conversion]
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                   ^
+In file included from src/thread_factory.c:7:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:54:12: note: expected 'sem_t * {aka struct _sync *}' but argument is of type 'int'
+ extern int sem_destroy(sem_t *__sem);
+            ^
+cc: /Users/wany/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+make: *** [build/x86_64-debug/src/thread_factory.o] Error 1
+19:24:20 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'thread_factory':
+src/thread_factory.c:48:12: warning: implicit declaration of function 'pthread_self' [-Wimplicit-function-declaration]
+  int c_id =pthread_self();
+            ^
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:97:4: warning: implicit declaration of function 'pthread_attr_init' [-Wimplicit-function-declaration]
+    pthread_attr_init(&pthread_att);
+    ^
+src/thread_factory.c:98:4: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+    pthread_create(NULL,&pthread_att,&thread_factory,NULL);
+    ^
+src/thread_factory.c:99:4: warning: implicit declaration of function 'pthread_destroy' [-Wimplicit-function-declaration]
+    pthread_destroy(&pthread_att);
+    ^
+src/thread_factory.c:108:26: warning: comparison between pointer and integer
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                          ^
+src/thread_factory.c:108:19: warning: passing argument 1 of 'sem_destroy' makes pointer from integer without a cast [-Wint-conversion]
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                   ^
+In file included from src/thread_factory.c:7:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:54:12: note: expected 'sem_t * {aka struct _sync *}' but argument is of type 'int'
+ extern int sem_destroy(sem_t *__sem);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+build/x86_64-debug/src/thread_factory.o: In function `main':
+/Users/wany/ide-7.0-workspace/cst8244_lab4/thread_factory//src/thread_factory.c:99: undefined reference to `pthread_destroy'
+cc: /Users/wany/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/thread_factory] Error 1
+Makefile:60: recipe for target 'build/x86_64-debug/thread_factory' failed
+19:24:33 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+build/x86_64-debug/src/thread_factory.o: In function `main':
+/Users/wany/ide-7.0-workspace/cst8244_lab4/thread_factory//src/thread_factory.c:99: undefined reference to `pthread_destroy'
+Makefile:60: recipe for target 'build/x86_64-debug/thread_factory' failed
+cc: /Users/wany/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/thread_factory] Error 1
+19:29:00 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'thread_factory':
+src/thread_factory.c:48:12: warning: implicit declaration of function 'pthread_self' [-Wimplicit-function-declaration]
+  int c_id =pthread_self();
+            ^
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:97:4: warning: implicit declaration of function 'pthread_attr_init' [-Wimplicit-function-declaration]
+    pthread_attr_init(&pthread_att);
+    ^
+src/thread_factory.c:98:4: warning: implicit declaration of function 'pthread_create' [-Wimplicit-function-declaration]
+    pthread_create(NULL,&pthread_att,&thread_factory,NULL);
+    ^
+src/thread_factory.c:99:4: warning: implicit declaration of function 'pthread_attr_destroy' [-Wimplicit-function-declaration]
+    pthread_attr_destroy(&pthread_att);
+    ^
+src/thread_factory.c:108:26: warning: comparison between pointer and integer
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                          ^
+src/thread_factory.c:108:19: warning: passing argument 1 of 'sem_destroy' makes pointer from integer without a cast [-Wint-conversion]
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                   ^
+In file included from src/thread_factory.c:7:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:54:12: note: expected 'sem_t * {aka struct _sync *}' but argument is of type 'int'
+ extern int sem_destroy(sem_t *__sem);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+19:35:50 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:108:26: warning: comparison between pointer and integer
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                          ^
+src/thread_factory.c:108:19: warning: passing argument 1 of 'sem_destroy' makes pointer from integer without a cast [-Wint-conversion]
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                   ^
+In file included from src/thread_factory.c:7:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:54:12: note: expected 'sem_t * {aka struct _sync *}' but argument is of type 'int'
+ extern int sem_destroy(sem_t *__sem);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+21:35:56 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_waker.d,-MT,build/x86_64-debug/src/thread_waker.o -o build/x86_64-debug/src/thread_waker.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_waker.c
+src/thread_waker.c: In function 'main':
+src/thread_waker.c:38:25: warning: comparison between pointer and integer
+   if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                         ^
+src/thread_waker.c:38:18: warning: passing argument 1 of 'sem_destroy' makes pointer from integer without a cast [-Wint-conversion]
+   if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                  ^
+In file included from src/thread_waker.c:6:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:54:12: note: expected 'sem_t * {aka struct _sync *}' but argument is of type 'int'
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_waker   build/x86_64-debug/src/thread_waker.o  
+ extern int sem_destroy(sem_t *__sem);
+            ^
+21:37:15 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:108:26: warning: comparison between pointer and integer
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                          ^
+src/thread_factory.c:108:19: warning: passing argument 1 of 'sem_destroy' makes pointer from integer without a cast [-Wint-conversion]
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                   ^
+In file included from src/thread_factory.c:7:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:54:12: note: expected 'sem_t * {aka struct _sync *}' but argument is of type 'int'
+ extern int sem_destroy(sem_t *__sem);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+21:45:08 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c:55:3: warning: "/*" within comment [-Wcomment]
+  //*loop
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+21:53:33 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'thread_factory':
+src/thread_factory.c:53:35: error: 'c_id' undeclared (first use in this function)
+  printf("child pid %d created\n ",c_id);
+                                   ^
+src/thread_factory.c:53:35: note: each undeclared identifier is reported only once for each function it appears in
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:113:26: warning: comparison between pointer and integer
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                          ^
+src/thread_factory.c:113:19: warning: passing argument 1 of 'sem_destroy' makes pointer from integer without a cast [-Wint-conversion]
+    if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                   ^
+In file included from src/thread_factory.c:9:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:54:12: note: expected 'sem_t * {aka struct _sync *}' but argument is of type 'int'
+ extern int sem_destroy(sem_t *__sem);
+            ^
+cc: /Users/wany/qnx700/host/darwin/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/thread_factory.o' failed
+make: *** [build/x86_64-debug/src/thread_factory.o] Error 1
+21:53:44 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_waker.d,-MT,build/x86_64-debug/src/thread_waker.o -o build/x86_64-debug/src/thread_waker.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_waker.c
+src/thread_waker.c: In function 'main':
+src/thread_waker.c:38:25: warning: comparison between pointer and integer
+   if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                         ^
+src/thread_waker.c:38:18: warning: passing argument 1 of 'sem_destroy' makes pointer from integer without a cast [-Wint-conversion]
+   if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                  ^
+In file included from src/thread_waker.c:6:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:54:12: note: expected 'sem_t * {aka struct _sync *}' but argument is of type 'int'
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_waker   build/x86_64-debug/src/thread_waker.o  
+ extern int sem_destroy(sem_t *__sem);
+            ^
+22:02:17 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+22:04:43 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:04:21 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:04:25 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:04:47 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:114:39: warning: character constant too long for its type
+    if(/*sem_close(pSem_t)*/sem_unlink('pSem_t') ==-1) perror("sem_close returned -1");
+                                       ^
+src/thread_factory.c:114:39: warning: passing argument 1 of 'sem_unlink' makes pointer from integer without a cast [-Wint-conversion]
+In file included from src/thread_factory.c:9:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:59:12: note: expected 'const char *' but argument is of type 'int'
+ extern int sem_unlink(const char *__name);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+12:05:36 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:115:39: warning: character constant too long for its type
+    if(/*sem_close(pSem_t)*/sem_unlink('pSem_t') ==-1) perror("sem_close returned -1");
+                                       ^
+src/thread_factory.c:115:39: warning: passing argument 1 of 'sem_unlink' makes pointer from integer without a cast [-Wint-conversion]
+In file included from src/thread_factory.c:9:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:59:12: note: expected 'const char *' but argument is of type 'int'
+ extern int sem_unlink(const char *__name);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+12:05:50 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:07:05 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:07:56 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:15:59 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:18:15 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:18:42 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:23:15 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:32:46 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/tmp.d,-MT,build/x86_64-debug/src/tmp.o -o build/x86_64-debug/src/tmp.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/tmp.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o build/x86_64-debug/src/tmp.o  
+build/x86_64-debug/src/tmp.o:(.bss+0x0): multiple definition of `usr1Happened'
+build/x86_64-debug/src/thread_factory.o:(.bss+0x0): first defined here
+build/x86_64-debug/src/tmp.o: In function `main':
+/Users/wany/ide-7.0-workspace/cst8244_lab4/thread_factory//src/tmp.c:55: multiple definition of `main'
+build/x86_64-debug/src/thread_factory.o:/Users/wany/ide-7.0-workspace/cst8244_lab4/thread_factory//src/thread_factory.c:74: first defined here
+Makefile:60: recipe for target 'build/x86_64-debug/thread_factory' failed
+cc: /Users/wany/qnx700/host/darwin/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld error 1
+make: *** [build/x86_64-debug/thread_factory] Error 1
+12:34:13 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c:55:3: warning: "/*" within comment [-Wcomment]
+  //*loop
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o build/x86_64-debug/src/tmp.o  
+12:34:49 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/tmp.d,-MT,build/x86_64-debug/src/tmp.o -o build/x86_64-debug/src/tmp.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/tmp.c
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_waker.d,-MT,build/x86_64-debug/src/thread_waker.o -o build/x86_64-debug/src/thread_waker.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_waker.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_waker   build/x86_64-debug/src/tmp.o build/x86_64-debug/src/thread_waker.o  
+12:42:25 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+12:44:23 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+20:05:50 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:115:18: warning: character constant too long for its type
+    if(sem_unlink('pSem_t') ==-1) perror("sem_close returned -1");
+                  ^
+src/thread_factory.c:115:18: warning: passing argument 1 of 'sem_unlink' makes pointer from integer without a cast [-Wint-conversion]
+In file included from src/thread_factory.c:9:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:59:12: note: expected 'const char *' but argument is of type 'int'
+ extern int sem_unlink(const char *__name);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+20:06:25 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_waker.d,-MT,build/x86_64-debug/src/thread_waker.o -o build/x86_64-debug/src/thread_waker.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_waker.c
+src/thread_waker.c: In function 'main':
+src/thread_waker.c:40:25: warning: comparison between pointer and integer
+   if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                         ^
+src/thread_waker.c:40:18: warning: passing argument 1 of 'sem_destroy' makes pointer from integer without a cast [-Wint-conversion]
+   if(sem_destroy(pSem_t ==-1)) perror("sem_destroy unsuccessful");
+                  ^
+In file included from src/thread_waker.c:8:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:54:12: note: expected 'sem_t * {aka struct _sync *}' but argument is of type 'int'
+ extern int sem_destroy(sem_t *__sem);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_waker   build/x86_64-debug/src/thread_waker.o  
+20:08:08 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:115:18: warning: character constant too long for its type
+    if(sem_unlink('pSem_t') ==-1) perror("sem_close returned -1");
+                  ^
+src/thread_factory.c:115:18: warning: passing argument 1 of 'sem_unlink' makes pointer from integer without a cast [-Wint-conversion]
+In file included from src/thread_factory.c:9:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:59:12: note: expected 'const char *' but argument is of type 'int'
+ extern int sem_unlink(const char *__name);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+20:32:52 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+20:34:09 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+20:35:24 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread_factory.d,-MT,build/x86_64-debug/src/thread_factory.o -o build/x86_64-debug/src/thread_factory.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread_factory.c
+src/thread_factory.c: In function 'main':
+src/thread_factory.c:115:18: warning: character constant too long for its type
+    if(sem_unlink('pSem_t') ==-1) perror("sem_close returned -1");
+                  ^
+src/thread_factory.c:115:18: warning: passing argument 1 of 'sem_unlink' makes pointer from integer without a cast [-Wint-conversion]
+In file included from src/thread_factory.c:9:0:
+/Users/wany/qnx700/target/qnx7/usr/include/semaphore.h:59:12: note: expected 'const char *' but argument is of type 'int'
+ extern int sem_unlink(const char *__name);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread_factory   build/x86_64-debug/src/thread_factory.o  
+20:36:04 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+20:39:02 **** Incremental Build of configuration x86_64-debug for project thread_factory ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+20:40:28 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.

@@ -1,0 +1,6 @@
+20:40:28 **** Incremental Build of configuration x86_64-debug for project thread_waker ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+
+20:40:28 Build Finished (took 140ms)
+

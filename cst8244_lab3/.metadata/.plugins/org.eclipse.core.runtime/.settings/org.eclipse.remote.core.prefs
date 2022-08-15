@@ -1,0 +1,7 @@
+connections/com.qnx.tools.ide.target.serial.core.connectionType/qn/qnx.serial.arch=x86
+connections/com.qnx.tools.ide.target.serial.core.connectionType/qn/serial.baudRate=11
+connections/com.qnx.tools.ide.target.serial.core.connectionType/qn/serial.byteSize=3
+connections/com.qnx.tools.ide.target.serial.core.connectionType/qn/serial.parity=0
+connections/com.qnx.tools.ide.target.serial.core.connectionType/qn/serial.portName=/dev/cu.URT2
+connections/com.qnx.tools.ide.target.serial.core.connectionType/qn/serial.stopBits=0
+eclipse.preferences.version=1

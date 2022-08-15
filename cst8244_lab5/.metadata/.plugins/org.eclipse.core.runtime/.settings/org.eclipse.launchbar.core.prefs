@@ -1,0 +1,13 @@
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,172.16.26.2/RELEASE=7.0.0
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,172.16.26.2/arch=x86_64
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,172.16.26.2/os=qnx
+LaunchTargetManager/configs/bin.lab4_client=com.qnx.tools.ide.target.qconn\:172.16.26.2
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
+com.qnx.tools.ide.qde.debug.core.descriptorType.default\:New_configuration/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:172.16.26.2
+com.qnx.tools.ide.qde.debug.core.descriptorType.default\:bin.lab4_client/activeLaunchMode=run
+com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/lab4_client/activeLaunchMode=run
+com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/lab5_client/activeLaunchMode=run
+com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/lab5_client/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:172.16.26.2
+configDescList=com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/lab5_client,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/lab5_server,com.qnx.tools.ide.qde.debug.core.descriptorType.default\:New_configuration,com.qnx.tools.ide.qde.debug.core.descriptorType.default\:bin.lab4_client,com.qnx.tools.ide.qde.debug.core.descriptorType.default\:bin.lab5_server,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/Assignment1
+eclipse.preferences.version=1

@@ -1,0 +1,62 @@
+/* Assignment Name: 		Lab_03_Threads
+ * Source-file:				Thread_Waker.c
+ * Header-file:				N/A
+ * Date:					30th September 2018
+ * Author:					Niladri Sengupta (Neal)
+ * Purpose: 				To demonstrate the knowledge and understanding of parent and child threads
+ * Software and Tools:		Momentics 7.0 + Neutrino SDP (64-bit)
+ * Language:				QNX - Embedded C
+ * Preamble:				This program multiple sends sem_post to Thread_Factory.c to unblock the threads
+ *
+ */
+
+/* HEADERS */
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <pthread.h>
+#include <semaphore.h>
+#include <fcntl.h>
+
+/* Semaphore pointer for sem_open */
+sem_t *sem;
+/*******************************************************************************
+ * main( )
+ ******************************************************************************/
+int main(void) {
+	/* Opening a already initialized-named Semaphore */
+	sem = sem_open("semP", 0);
+	/* Print PID of current program */
+	printf("Thread-Waker PID: %d \n", getpid());
+	/* Set numWakeup to -1 to avoid arbitrary values */
+	int numWakeup = -1;
+	int i = 0; /* For looping for numWakeup */
+	/* Do-While Loop for how many threads to wake up
+	 * Enter '0' to Exit. */
+	do{
+		printf("How many threads would you like to wake up (enter 0 to exit): \n");
+		scanf("%d", &numWakeup);
+		for(i = 0; i < numWakeup; i++) {
+				/* Increment the semaphore by one allowing a seller to get access. */
+				sem_post(sem);
+			}
+	}while(numWakeup != 0);
+
+	/* End-of Semaphore life-cycle */
+	/* Function to close Semaphore */
+	int semC = sem_close(sem);
+	if(semC == -1){
+		perror("Sem_Close was not executed");
+	}
+	/* Destroy the semaphore */
+	int semD = sem_destroy(sem);
+	if(semD == -1){
+		perror("Sem_Destroy was not executed");
+	}
+	/* Exit-Success on completion of the program */
+	return EXIT_SUCCESS;
+}

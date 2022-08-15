@@ -1,0 +1,176 @@
+!SESSION 2022-08-07 20:42:50.803 -----------------------------------------------
+eclipse.buildId=7.0.4
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -keyring /Users/wany/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data /Users/wany/ide-7.0-workspace/cst8244_A2 -keyring /Users/wany/.eclipse_keyring
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-07 20:42:53.435
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-07 20:42:53.436
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-07 20:42:53.436
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-07 20:42:53.437
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-07 20:42:53.437
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.net 1 0 2022-08-07 20:42:54.066
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2022-08-07 20:42:57.230
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2022-08-07 20:42:57.237
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-08-07 20:43:39.335
+!MESSAGE Indexed 'metronome' (1 sources, 16 headers) in 0.861 sec: 1,161 declarations; 1,067 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2022-08-08 15:55:56.254 -----------------------------------------------
+eclipse.buildId=7.0.4
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -keyring /Users/wany/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/wany/.eclipse_keyring
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-08 15:55:59.596
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-08 15:55:59.597
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-08 15:55:59.597
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-08 15:55:59.598
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-08 15:55:59.598
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.net 1 0 2022-08-08 15:56:00.296
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2022-08-08 15:56:04.880
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2022-08-08 15:56:04.890
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+!SESSION 2022-08-09 11:46:04.909 -----------------------------------------------
+eclipse.buildId=7.0.4
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -keyring /Users/wany/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data /Users/wany/ide-7.0-workspace/cst8244_A2 -keyring /Users/wany/.eclipse_keyring
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-09 11:46:07.709
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-09 11:46:07.710
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-09 11:46:07.711
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-09 11:46:07.711
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-09 11:46:07.711
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.net 1 0 2022-08-09 11:46:08.364
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2022-08-09 11:46:12.864
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2022-08-09 11:46:12.871
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+!SESSION 2022-08-11 17:37:12.346 -----------------------------------------------
+eclipse.buildId=7.0.4
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -keyring /Users/wany/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data /Users/wany/ide-7.0-workspace/cst8244_A2 -keyring /Users/wany/.eclipse_keyring
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-11 17:37:15.825
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-11 17:37:15.826
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-11 17:37:15.827
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-11 17:37:15.827
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-11 17:37:15.827
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.net 1 0 2022-08-11 17:37:16.563
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2022-08-11 17:37:21.475
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2022-08-11 17:37:21.482
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY org.eclipse.debug.core 4 125 2022-08-11 18:04:31.016
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at com.qnx.tools.ide.utils.target.TargetProcess$InputStreamWrapper.read(TargetProcess.java:227)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:748)
+!SESSION 2022-08-11 18:17:10.238 -----------------------------------------------
+eclipse.buildId=7.0.4
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -keyring /Users/wany/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data /Users/wany/ide-7.0-workspace/cst8244_A2 -keyring /Users/wany/.eclipse_keyring
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-11 18:17:13.146
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-11 18:17:13.147
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-11 18:17:13.148
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-11 18:17:13.148
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-08-11 18:17:13.149
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.net 1 0 2022-08-11 18:17:13.930
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2022-08-11 18:17:18.253
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2022-08-11 18:17:18.261
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper

@@ -1,0 +1,6 @@
+20:42:01 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+
+20:42:01 Build Finished (took 107ms)
+

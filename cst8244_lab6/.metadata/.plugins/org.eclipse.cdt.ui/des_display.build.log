@@ -1,0 +1,6 @@
+22:45:42 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+
+22:45:42 Build Finished (took 148ms)
+

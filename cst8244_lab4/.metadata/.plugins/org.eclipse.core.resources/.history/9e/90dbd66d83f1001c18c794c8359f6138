@@ -1,0 +1,118 @@
+/* Assignment Name: 		Lab_03_Threads
+ * Source-file:				Thread_Factory.c
+ * Header-file:				N/A
+ * Date:					30th September 2018
+ * Author:					Niladri Sengupta (Neal)
+ * Purpose: 				To demonstrate the knowledge and understanding of parent and child threads
+ * Software and Tools:		Momentics 7.0 + Neutrino SDP (64-bit)
+ * Language:				QNX - Embedded C
+ * Preamble:				This program multiple child threads through a single parent thread.
+ * 							The child threads are then set to wait (blocked) to receive the unblocking-signal
+ * 							by the Thread_Waker.c file. The program only terminates through a signal from SIGUSR1 .
+ *
+ */
+
+/* HEADERS */
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <pthread.h>
+#include <semaphore.h>
+#include <fcntl.h>
+
+/* Signature of Signal-Handler */
+void sigusr1_handler(int sig);
+/* Global Variables */
+sig_atomic_t usr1Happened = 0;
+sig_atomic_t signal_num = 0;
+sem_t *sem; /* Semaphore Pointer for sem_open */
+
+/* Function to process child thread and make them wait for sem_post
+ * within an infinite-loop
+ * */
+void* childThread(void* arg) {
+	printf("Child thread %d created\n", pthread_self());
+	while(1) {
+		/* Make the current thread wait for sem_post */
+		int x = sem_wait(sem); /* Return-value for sem_wait. Successful = 0 */
+		if(x != 0){ /* If unsuccessful, then print error */
+			perror("\nUnsuccessful sem-wait\n");
+		}
+		/* After receiving sem_post from Thread_Wake */
+		printf("Child thread %d unblocked\n", pthread_self());
+		/* Sleep to add delay */
+		sleep(5);
+	}
+	return NULL;
+}
+/*******************************************************************************
+ * main( )
+ ******************************************************************************/
+int main(void) {
+	struct sigaction usr1;
+	usr1.sa_handler = sigusr1_handler; /* Setting the handler for SIGUSR1 */
+	usr1.sa_flags = 0; /* or SA_RESTART */
+	sigemptyset(&usr1.sa_mask);
+	/* Checking whether sigemptyset returned 0 or -1 */
+	/* sigaction() function allows the calling process to examine
+	 * and/or specify the action to be associated with a specific signal. */
+	if (sigaction(SIGUSR1, &usr1, NULL) == -1) {
+				/* If sigemptyset returned -1 */
+				perror("sigaction");
+				exit(1);
+	}
+	/* Lab_03 - Thread in Semaphores */
+	/* Requesting for the number of children threads to create */
+	int nThreads;
+	printf("Enter the number of threads to create: \n");
+	scanf("%d", &nThreads);
+	/* Initializing an opening a named Semaphore */
+	sem = sem_open("semP", O_CREAT, S_IWOTH, 0);
+	/* Initialize and create required child-threads*/
+	pthread_attr_t attr;
+	int i;
+	for(i = 0; i < nThreads; i++) {
+		pthread_attr_init(&attr);
+		pthread_create(NULL, &attr, &childThread, NULL);
+		pthread_attr_destroy(&attr);
+	}
+	/* Infinite loop - So we can kill it using SIGUSR1 */
+	while(usr1Happened != 1){
+		//printf("\nLoop"); /* Do Something meaningless */
+	}
+
+	/* End-of Semaphore life-cycle */
+	/* Function to close Semaphore */
+	int semC = sem_close(sem);
+	if(semC == -1){
+		perror("Sem_Close was not executed");
+	}
+	/* Function to destroy Semaphore */
+	int semD = sem_destroy(sem);
+	if(semD == -1){
+		perror("Sem_Destroy was not executed");
+	}
+	/* Exit-Success on completion of the program */
+	return EXIT_SUCCESS;
+}
+
+/* Function signature:  void sigusr1_handler(int sig);
+ * Author:				Niladri Sengupta
+ * Description:			Handles the signal sent by SIGUSR1.
+ * 						Terminates the process linked with the
+ * 						signal and returns.
+ */
+void sigusr1_handler(int sig) {
+	/* Setting usr1Happened to 1 to show that handler was called */
+	usr1Happened = 1;
+	signal_num = sig; /* Additional information/Testing Purposes */
+	/* Print out that signal has been received for the child process
+	 * and exit - Print PID in each statement*/
+	printf("\nPID = %d: Thread-factory received USR1.", getpid());
+	printf("\nPID = %d: Thread-factory Exiting.\n", getpid());
+}
+

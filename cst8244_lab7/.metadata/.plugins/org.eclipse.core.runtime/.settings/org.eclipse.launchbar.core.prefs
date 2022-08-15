@@ -1,0 +1,14 @@
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,172.16.26.2/RELEASE=7.0.0
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,172.16.26.2/arch=x86_64
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,172.16.26.2/os=qnx
+LaunchTargetManager/configs/bin.myController=com.qnx.tools.ide.target.qconn\:172.16.26.2
+LaunchTargetManager/configs/bin.myDevice=com.qnx.tools.ide.target.qconn\:172.16.26.2
+LaunchTargetManager/configs/myController=com.qnx.tools.ide.target.qconn\:172.16.26.2
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
+com.qnx.tools.ide.qde.debug.core.descriptorType.default\:bin.myController/activeLaunchMode=run
+com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/myController/activeLaunchMode=run
+com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/myController/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:172.16.26.2
+com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/myDevice/activeLaunchMode=run
+configDescList=com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/myDevice,com.qnx.tools.ide.qde.debug.core.descriptorType.default\:bin.myController,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/myController,com.qnx.tools.ide.qde.debug.core.descriptorType.default\:bin.myDevice
+eclipse.preferences.version=1

@@ -1,0 +1,16 @@
+23:12:14 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+23:13:08 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+23:13:34 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+23:14:48 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+23:15:33 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j7 all 
+make: Nothing to be done for 'all'.

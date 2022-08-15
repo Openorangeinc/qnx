@@ -1,0 +1,6 @@
+18:56:08 **** Incremental Build of configuration x86_64-debug for project metronome ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+
+18:56:08 Build Finished (took 104ms)
+

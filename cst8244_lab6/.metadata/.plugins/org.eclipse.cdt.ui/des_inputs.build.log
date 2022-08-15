@@ -1,0 +1,6 @@
+22:51:16 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+
+22:51:17 Build Finished (took 262ms)
+

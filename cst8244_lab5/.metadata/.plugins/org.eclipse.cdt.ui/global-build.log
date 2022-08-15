@@ -1,0 +1,98 @@
+13:58:27 **** Build of configuration x86_64-debug for project lab4_client ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab4_client.d,-MT,build/x86_64-debug/src/lab4_client.o -o build/x86_64-debug/src/lab4_client.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab4_client.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/lab4_client   build/x86_64-debug/src/lab4_client.o  
+13:59:20 **** Build of configuration x86_64-debug for project lab5_server ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab5_server.d,-MT,build/x86_64-debug/src/lab5_server.o -o build/x86_64-debug/src/lab5_server.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab5_server.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/lab5_server   build/x86_64-debug/src/lab5_server.o  
+21:55:49 **** Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab4_client.d,-MT,build/x86_64-debug/src/lab4_client.o -o build/x86_64-debug/src/lab4_client.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab4_client.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/lab4_client   build/x86_64-debug/src/lab4_client.o  
+21:56:03 **** Incremental Build of configuration x86_64-debug for project lab5_server ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab5_server.d,-MT,build/x86_64-debug/src/lab5_server.o -o build/x86_64-debug/src/lab5_server.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab5_server.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/lab5_server   build/x86_64-debug/src/lab5_server.o  
+21:56:15 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+21:58:46 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+22:05:24 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+22:07:05 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+22:14:52 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+20:16:05 **** Incremental Build of configuration x86_64-debug for project lab5_server ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab5_server.d,-MT,build/x86_64-debug/src/lab5_server.o -o build/x86_64-debug/src/lab5_server.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab5_server.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/lab5_server   build/x86_64-debug/src/lab5_server.o  
+20:16:21 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab4_client.d,-MT,build/x86_64-debug/src/lab4_client.o -o build/x86_64-debug/src/lab4_client.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab4_client.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/lab4_client   build/x86_64-debug/src/lab4_client.o  
+20:35:58 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab4_client.d,-MT,build/x86_64-debug/src/lab4_client.o -o build/x86_64-debug/src/lab4_client.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab4_client.c
+src/lab4_client.c: In function 'main':
+src/lab4_client.c:26:18: warning: comparison between pointer and integer
+  if(atol(argv[2] !=atoi(argv[2]))){
+                  ^
+src/lab4_client.c:26:10: warning: passing argument 1 of 'atol' makes pointer from integer without a cast [-Wint-conversion]
+  if(atol(argv[2] !=atoi(argv[2]))){
+          ^
+In file included from src/lab4_client.c:2:0:
+/Users/wany/qnx700/target/qnx7/usr/include/stdlib.h:112:13: note: expected 'const char *' but argument is of type 'int'
+ extern long atol(const char *__nptr);
+             ^
+src/lab4_client.c:49:8: warning: character constant too long for its type
+   puts('ERR alot of args');
+        ^
+src/lab4_client.c:49:8: warning: passing argument 1 of 'puts' makes pointer from integer without a cast [-Wint-conversion]
+In file included from src/lab4_client.c:1:0:
+/Users/wany/qnx700/target/qnx7/usr/include/stdio.h:177:12: note: expected 'const char *' but argument is of type 'int'
+ extern int puts(const char *__s);
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/lab4_client   build/x86_64-debug/src/lab4_client.o  
+            ^
+20:38:07 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/lab4_client.d,-MT,build/x86_64-debug/src/lab4_client.o -o build/x86_64-debug/src/lab4_client.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/lab4_client.c
+src/lab4_client.c: In function 'main':
+src/lab4_client.c:26:18: warning: comparison between pointer and integer
+  if(atol(argv[2] !=atoi(argv[2]))){
+                  ^
+src/lab4_client.c:26:10: warning: passing argument 1 of 'atol' makes pointer from integer without a cast [-Wint-conversion]
+  if(atol(argv[2] !=atoi(argv[2]))){
+          ^
+In file included from src/lab4_client.c:2:0:
+/Users/wany/qnx700/target/qnx7/usr/include/stdlib.h:112:13: note: expected 'const char *' but argument is of type 'int'
+ extern long atol(const char *__nptr);
+             ^
+src/lab4_client.c:49:8: warning: character constant too long for its type
+   puts('ERR alot of args');
+        ^
+src/lab4_client.c:49:8: warning: passing argument 1 of 'puts' makes pointer from integer without a cast [-Wint-conversion]
+In file included from src/lab4_client.c:1:0:
+/Users/wany/qnx700/target/qnx7/usr/include/stdio.h:177:12: note: expected 'const char *' but argument is of type 'int'
+ extern int puts(const char *__s);
+            ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/lab4_client   build/x86_64-debug/src/lab4_client.o  
+20:41:10 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+20:42:01 **** Incremental Build of configuration x86_64-debug for project lab5_client ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+20:42:34 **** Incremental Build of configuration x86_64-debug for project lab5_server ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+20:35:25 **** Build of configuration x86_64-debug for project Assignment1 ****
+make -j7 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/Assignment1.d,-MT,build/x86_64-debug/src/Assignment1.o -o build/x86_64-debug/src/Assignment1.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/Assignment1.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/Assignment1   build/x86_64-debug/src/Assignment1.o  

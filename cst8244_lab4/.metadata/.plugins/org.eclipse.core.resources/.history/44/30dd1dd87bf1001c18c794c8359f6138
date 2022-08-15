@@ -1,0 +1,121 @@
+
+
+//@author bisi0005@algonquinlive.com
+//lab 04 a
+
+#include <stdio.h>
+#include <stdlib.h>
+#include<unistd.h>
+#include<semaphore.h>
+#include<errno.h>
+#include<sys/wait.h>
+#include<sys/types.h>
+#include<fcntl.h>
+#include<pthread.h>
+#define true 1
+#define false 0
+#define SUCCESS 0
+
+//sig handler
+//signal receiver
+sig_atomic_t usr1Happened =0;
+
+//semaphore
+sem_t *pSem_t;
+
+//fn declarations
+void sig_action_happened(int);
+void* thread_factory(void* p);
+
+
+
+//sig handler to set  the user1_happened to true 1
+//@param s is the pid that gets interrupted
+void sig_action_happened(int s){
+	// set atomic sig to true
+	usr1Happened= 1;
+	printf(	"PID : %d received USR1\n",getpid());
+	printf("PID : %d running\n ",getpid());
+	printf("PID : %d exiting ",getpid());
+	puts("interrupt happened "); // was curious about the param meaning
+	printf("id %d",s);
+}
+
+//create child process
+// wait for a sem_post
+//show thread id if created
+//show errors if any
+//loop infinite
+void* thread_factory(void* p){
+
+	int c_id =pthread_self();
+	//print child id
+	printf("child pid %d created\n ",c_id);
+
+	//*loop
+	while(true){
+		//wait for sem_post in thread wakerß
+		int sem_id =sem_wait(pSem_t);
+		if(sem_id!=SUCCESS){ //success ==int 0
+			//if not success
+			perror("\nsem_wait was not successful\n");
+		}
+
+		//unblock the thread
+		printf("child thread with pid %d unblocked",pthread_self());
+		//wait 5 sec
+		sleep(5);
+	}
+	return NULL;
+
+}
+
+
+int main(void) {
+	struct sigaction Sigusr1;
+
+		Sigusr1.sa_handler = sig_action_happened;
+
+		Sigusr1.sa_flags = 0; //or SA_RESTART
+
+		sigemptyset(&Sigusr1.sa_mask); //blocked sigs =no signals
+		if (sigaction(SIGUSR1, &Sigusr1, NULL) == -1) {
+
+					perror("sig action at sigusr1 returned -1");
+					exit(1);
+		}
+		//child threads to create
+		int c_threads;
+		printf("Enter the number of children: \n");
+		scanf("%d", &c_threads);
+		//init a sephamore
+
+		/// name =pSem_t
+		/// falg O_CREAT 0x0008= create a named semaphore if not exists
+		//mode S_IWOTH 0x0002= open the semaphore in write mode
+		//int val =0 initial value of the semaphore
+		pSem_t =sem_open("pSem_t",O_CREAT,S_IWOTH,0);
+
+		//create child threads
+		pthread_attr_t pthread_att;
+		for(int threads=0;threads<c_threads;threads++){
+			pthread_attr_init(&pthread_att);
+			pthread_create(NULL,&pthread_att,&thread_factory,NULL);
+			pthread_attr_destroy(&pthread_att);
+
+		}
+		//loop till SIGUSR1 is raised
+		while(usr1Happened !=1){
+		//
+			puts("waiting for sigusr1");
+		}
+		//closing sem_t
+		 if(sem_close(pSem_t) ==-1) perror("sem_close returned -1");
+		 if(sem_destroy(pSem_t) ==-1) perror("sem_destroy unsuccessful");
+
+
+	return EXIT_SUCCESS;
+}
+
+
+

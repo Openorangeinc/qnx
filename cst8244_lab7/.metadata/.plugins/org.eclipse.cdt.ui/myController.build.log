@@ -1,0 +1,6 @@
+19:51:30 **** Incremental Build of configuration x86_64-debug for project myController ****
+make -j7 all 
+make: Nothing to be done for 'all'.
+
+19:51:30 Build Finished (took 123ms)
+

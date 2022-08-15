@@ -1,0 +1,11 @@
+12:22:00 **** Build of configuration x86_64-debug for project des_inputs ****
+make -j7 all 
+qcc -lang-c++ -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.cpp
+src/des_inputs.cpp: In function 'int main(int, char**)':
+src/des_inputs.cpp:34:9: warning: unused variable 'exitTemp' [-Wunused-variable]
+     int exitTemp = MsgSend (cidToController, &sendMsg, sizeof (sendMsg), &rmsg, sizeof (rmsg));
+         ^
+qcc -lang-c++ -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+
+12:22:00 Build Finished (took 198ms)
+
